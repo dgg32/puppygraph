@@ -1,0 +1,2 @@
+docker run -p 8081:8081 -p 8182:8182 -p 7687:7687 -e PUPPYGRAPH_PASSWORD=puppygraph123 -d \
+       --name puppy --rm -v ./drug.db:/home/share/drug.db puppygraph/puppygraph:0.107

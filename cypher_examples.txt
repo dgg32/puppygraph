@@ -1,0 +1,4 @@
+MATCH (n:Trials_view) WHERE n.drug_names_str =~ 'belimumab'  RETURN n LIMIT 10;
+
+
+MATCH (n:Trial) WHERE 'belimumab' IN split(n.drug_names, ';') RETURN n LIMIT 5
