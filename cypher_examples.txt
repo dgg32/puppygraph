@@ -1,3 +1,22 @@
+MATCH p=(d:Disorder)<-[:MAY_TREAT]-(n:Drug {name: "pembrolizumab"})-[r:HAS_MOA]->(m)
+RETURN p
+LIMIT 10
+
+
+MATCH p=(:Drug)-[]->(d:Disorder)<-[:MAY_TREAT]-(n:Drug {name: "pembrolizumab"})
+RETURN p
+LIMIT 10
+
+
+
+MATCH (d:Disorder {name: "Lupus Erythematosus, Systemic"}) <-[:MAY_TREAT]- (dr:Drug)
+WITH dr
+MATCH (n:Trial_view) WHERE dr.name IN split(n.drug_names, ';') 
+RETURN n LIMIT 5
+
+
+
+
 MATCH (n:Trials_view) WHERE n.drug_names_str =~ 'belimumab'  RETURN n LIMIT 10;
 
 
