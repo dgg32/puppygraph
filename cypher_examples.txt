@@ -3,9 +3,11 @@ RETURN p
 LIMIT 10
 
 
-MATCH p=(:Drug)-[]->(d:Disorder)<-[:MAY_TREAT]-(n:Drug {name: "pembrolizumab"})
+MATCH p=(n:Drug {name: "pembrolizumab"}) -[:MAY_TREAT]-> 
+  (d:Disorder) <-[:MAY_TREAT]- (o:Drug) 
+  -[:HAS_MOA]->(m)
 RETURN p
-LIMIT 10
+LIMIT 100
 
 
 

@@ -6,29 +6,30 @@
 
   
 
-This repository contains code and data for my article "[DuckDB as a DrugDB: a Free and Simple Multi-Model Drug and Trial Database](https://dgg32.medium.com/duckdb-as-a-drugdb-a-free-and-simple-multi-model-drug-and-trial-database-83c222d1e9dd)".
+This repository contains code and data for my article "[PuppyGraph: Graph Queries on SQL Database Without Migration](https://dgg32.medium.com/duckdb-as-a-drugdb-a-free-and-simple-multi-model-drug-and-trial-database-83c222d1e9dd)".
 
 
 
 # Prerequisite
 
-OpenAI API 
+Docker
+
+PuppyGraph
 
 Python
+
+DuckDB
 
 
 # Run
 
-1. Fill in the token in config.yaml for vector embedding and vector search
+1. Run import_2.ipynb to import data to DuckDB
 
->  openai_token: [YOUR_OPENAI_TOKEN]
+2. Run PuppyGraph
 
+3. Import schema.json
 
-2. Install DuckDB by following the instruction in the article  
-
-3. Run import.ipynb to import the data
-
-4. Run queries either in a Python or using tools such as DBeaver
+4. Query graph within PuppyGraph UI
 
 ## Authors
 
