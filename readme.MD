@@ -6,7 +6,7 @@
 
   
 
-This repository contains code and data for my article "[PuppyGraph: Graph Queries on SQL Database Without Migration](https://dgg32.medium.com/duckdb-as-a-drugdb-a-free-and-simple-multi-model-drug-and-trial-database-83c222d1e9dd)".
+This repository contains code and data for my article "[PuppyGraph: Graph Queries on SQL Database Without Migration](https://dgg32.medium.com/puppygraph-graph-queries-on-sql-database-without-migration-96c63fc932b3)".
 
 
 
